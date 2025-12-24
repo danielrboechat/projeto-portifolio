@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-:root{ /*COLOCAR NO EXTRAS DO WORD*/
+:root{
     --fundo-principal: #F5F5F5;
     --texto: #222222;
     --texto-inverso: #FFFFFF;
@@ -45,9 +45,9 @@ header{
     align-content: center;
     height: 45px;
     margin-bottom: 10px;
-    position: sticky;/*ANOTAR SOBRE */
-    top: 0px; /*ANOTAR SOBRE */
-    z-index: 2; /*ANOTAR SOBRE */
+    position: sticky;
+    top: 0px;
+    z-index: 2;
 }
 
 ul{
@@ -62,7 +62,7 @@ header a{
     color: var(--texto-inverso);
     padding: 12px 15px;
     border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s ease; /*ANOTAR SOBRE */
+    transition: background-color 0.5s, color 0.5s ease;
 }
 
 header a:hover{
@@ -95,10 +95,10 @@ section#container-foto{
 }
 
 div#bgfoto{
-    aspect-ratio: 1/1; /* EU NAO PRECISO DO HEIGHT SE COLOCAR O ASPECT RATIO, JA CALCULA DIRETO*/
+    aspect-ratio: 1/1;
     width: 200px;
     border: 5px solid var(--fundo-card);
-    outline: 5px solid var(--destaque); /*ANOTAR*/
+    outline: 5px solid var(--destaque);
     border-radius: 50%;
     background-image: url(../imgs/eu-e-lud.jpg);
     overflow: hidden;
@@ -142,9 +142,7 @@ h2{
     margin: 10px 0px;
 }
 
-div#coluna3 section#c-video{  /*COLOCAR RELATIVE NO CONTAINER E ABSOLUTE NO VIDEO TBM FUNCIONA*/
-    width: calc(100%-10px);
-    max-width: 100%;    /*ANOTAR QUE PARA O VIDEO NAO ESTICAR TEM QUE USAR MAX-WIDTH 100%*/
+div#coluna3 section#c-video{
     aspect-ratio: 16/9;
 }
 
@@ -203,8 +201,7 @@ section div.grad{
     margin-top: 20px;
     padding-left: 10px;
     border-left: 5px solid var(--destaque-inverso);
-    transition: border-left 0.5s ease;  /*ESTUDAR*/
-    max-width: cover;
+    transition: border-left 0.5s ease;
 }
 
 section div.grad:hover{
@@ -244,10 +241,6 @@ div#sociais{background-image: url(../imgs/projeto-04-links.jpg);}
 div#android{background-image: url(../imgs/projeto-03-android.jpg);}
 div#cordel{background-image: url(../imgs/projeto-02-cordel.jpg);}
 div#videos{background-image: url(../imgs/projeto-01-videos.jpg);}
-
-section#projetos p.proj-ano{
-    margin-top: 0px;
-}
 
 section#projetos p.proj-texto{
     text-align: justify;

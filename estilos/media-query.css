@@ -4,7 +4,7 @@
 
     main{
         display: grid;
-        grid-template: auto / 10px 370px minmax(0, 1fr) 10px; /*ANOTAR ESSE MINMAX*/
+        grid-template: auto / 10px 370px minmax(0, 1fr) 10px;
     }
 
     div#coluna1{grid-area: 1/1/2/2;}
