@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+/* MOBILE FIRST */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{ /*COLOCAR NO EXTRAS DO WORD*/
+    --fundo-principal: #F5F5F5;
+    --texto: #222222;
+    --texto-inverso: #FFFFFF;
+    --destaque: #0077FF;
+    --destaque-inverso: #66BBFF;
+    --fundo-card: #FFFFFF;
+}
+
+body.escuro{
+    --fundo-principal: #222222;
+    --texto: #E0E0E0;
+    --texto-inverso: #333333;
+    --destaque: #FF5522;
+    --destaque-inverso: #A73917;
+    --fundo-card: #444444;
+}
+
+body,html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    background-color: var(--fundo-principal);
+    color: var(--texto);
+    transition: background-color 0.5s, color 0.5s;
+    width: 100%;
+}
+
+header{
+    background-color: var(--destaque);
+    color: var(--texto);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    height: 45px;
+    margin-bottom: 10px;
+    position: sticky;/*ANOTAR SOBRE */
+    top: 0px; /*ANOTAR SOBRE */
+    z-index: 2; /*ANOTAR SOBRE */
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--texto-inverso);
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s ease; /*ANOTAR SOBRE */
+}
+
+header a:hover{
+    background-color: var(--destaque-inverso);
+    color: var(--destaque);
+}
+
+main{
+    display: grid;
+    grid-template: auto auto / 10px auto 10px;
+}
+
+div#coluna1{grid-area: 1/1/2/2;}
+div#coluna2{grid-area: 1/2/2/3;}
+div#coluna3{grid-area: 2/2/3/3;}
+
+section{
+    background-color: var(--fundo-card);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+
+section#container-foto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+div#bgfoto{
+    aspect-ratio: 1/1; /* EU NAO PRECISO DO HEIGHT SE COLOCAR O ASPECT RATIO, JA CALCULA DIRETO*/
+    width: 200px;
+    border: 5px solid var(--fundo-card);
+    outline: 5px solid var(--destaque); /*ANOTAR*/
+    border-radius: 50%;
+    background-image: url(../imgs/eu-e-lud.jpg);
+    overflow: hidden;
+    background-position: bottom center;
+}
+
+h1{
+    color: var(--destaque);
+    margin: 10px 0px;
+    font-size: 1.8em;
+}
+
+h1#align-s{
+    align-self: flex-start;
+}
+
+div.container-site{
+    display: flex;
+    font-size: 2em;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+div.container-site a{
+    text-decoration: none;
+    color: var(--destaque);
+}
+
+div.container-site a:hover{
+    color: var(--destaque-inverso);
+    transition: color 0.5s ease;
+}
+
+em{
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+h2{
+    color: var(--destaque);
+    margin: 10px 0px;
+}
+
+div#coluna3 section#c-video{  /*COLOCAR RELATIVE NO CONTAINER E ABSOLUTE NO VIDEO TBM FUNCIONA*/
+    width: calc(100%-10px);
+    max-width: 100%;    /*ANOTAR QUE PARA O VIDEO NAO ESTICAR TEM QUE USAR MAX-WIDTH 100%*/
+    aspect-ratio: 16/9;
+}
+
+iframe#video{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+div.flex{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+section#habilidade h3{
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+section#habilidade p{
+    color: var(--destaque);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+div#container-allskills{
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+div.barra, div.progresso{
+    height: 8px;
+    border-radius: 5px;
+}
+
+div.barra{
+    background-color: var(--fundo-principal);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+div.cem,div.nov,div.oitcin,div.oit,div.setcin,div.ses{background-color: var(--destaque-inverso);}
+
+div.cem{width: 100%;}
+div.nov{width: 90%;}
+div.oitcin{width: 85%;}
+div.oit{width: 80%;}
+div.setcin{width: 75%;}
+div.ses{width: 60%;}
+
+section div.grad{
+    background-color: var(--fundo-principal);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-left: 5px solid var(--destaque-inverso);
+    transition: border-left 0.5s ease;  /*ESTUDAR*/
+    max-width: cover;
+}
+
+section div.grad:hover{
+    border-left: 10px solid var(--destaque);
+    cursor: pointer;
+}
+
+section p.l1{
+    font-weight: bolder;
+    font-size: 0.8em;
+    color: var(--texto);
+}
+
+section p.l2{
+    font-size: 1.1em;
+    color: var(--destaque-inverso);
+    font-weight: bolder;
+}
+
+section#projetos a{
+    color: var(--texto);
+    text-decoration: none;
+}
+
+div.foto-capa{
+    background-size: 100% 100%;
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+div#album{background-image: url(../imgs/projeto-06-album.jpg);}
+div#login{background-image: url(../imgs/projeto-05-login.jpg);}
+div#sociais{background-image: url(../imgs/projeto-04-links.jpg);}
+div#android{background-image: url(../imgs/projeto-03-android.jpg);}
+div#cordel{background-image: url(../imgs/projeto-02-cordel.jpg);}
+div#videos{background-image: url(../imgs/projeto-01-videos.jpg);}
+
+section#projetos p.proj-ano{
+    margin-top: 0px;
+}
+
+section#projetos p.proj-texto{
+    text-align: justify;
+}
+
+footer{
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    text-align: center;
+    padding: 15px 0px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--texto-inverso);
+}
+
+footer a:hover{
+    color: var(--destaque-inverso);
+}
